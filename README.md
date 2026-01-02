@@ -1,37 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌸 CycleFlow - Calculateur de Cycle Menstruel
 
-## Getting Started
+## 📱 À propos du projet
 
-First, run the development server:
+**CycleFlow** est une application web simple et intuitive qui aide les femmes à suivre leur cycle menstruel. Elle calcule automatiquement les dates importantes comme l'ovulation et les périodes fertiles, le tout dans une interface moderne et facile à utiliser.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Fonctionnalités principales
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 📅 Calculs automatiques
+- **Date d'ovulation** estimée
+- **Période fertile** (6 jours de fertilité maximale)
+- **Prochaines règles** prévues
+- **Date de fin** des règles actuelles
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🎨 Interface élégante
+- **Design moderne** et professionnel
+- **Adapté aux mobiles** et tablettes
+- **Couleurs douces** et agréables
+- **Animations fluides**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🔄 Suivi intelligent
+- **4 phases du cycle** visualisées
+- **Calendrier interactif** avec codes couleurs
+- **Sauvegarde automatique** de vos préférences
+- **Prédictions** basées sur vos données
 
-## Learn More
+## 🚀 Comment l'utiliser ?
 
-To learn more about Next.js, take a look at the following resources:
+### 1. **Saisie simple**
+- Entrez la date de début de vos règles
+- Choisissez la durée habituelle de votre cycle (28 jours par défaut)
+- Indiquez combien de temps durent vos règles
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 2. **Résultats instantanés**
+L'application calcule immédiatement :
+- ✅ Quand vous ovulerez
+- ✅ Votre période de fertilité
+- ✅ La date de vos prochaines règles
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 3. **Visualisation claire**
+- 📊 Un calendrier coloré montre chaque jour du cycle
+- 🎯 Les dates importantes sont mises en évidence
+- 📱 Tout est optimisé pour votre téléphone
 
-## Deploy on Vercel
+## 📱 Compatibilité
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Téléphones** : iPhone, Android (toutes tailles)
+- **Tablettes** : iPad, Android tablets
+- **Ordinateurs** : Mac, Windows
+- **Navigateurs** : Chrome, Safari, Firefox, Edge
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# menstrual-cycle-tracker
+## 🔒 Confidentialité
+
+**Vos données restent privées :**
+- ✅ Aucun enregistrement sur internet
+- ✅ Tout est stocké sur votre appareil
+- ✅ Pas de connexion nécessaire
+- ✅ Pas de création de compte
+
+## ⚠️ Avertissement important
+
+Cette application fournit des **estimations** basées sur des moyennes. Elle ne remplace **pas** un avis médical professionnel. Consultez toujours un·e médecin pour des conseils personnalisés.
+
+## 💡 Pourquoi utiliser CycleFlow ?
+
+- **Gratuit** : Pas d'achats dans l'application
+- **Simple** : Interface intuitive, pas de complications
+- **Pratique** : Accès rapide sur votre téléphone
+- **Utile** : Pour la contraception naturelle ou la conception
+
+## 🆘 Support
+
+En cas de problème :
+1. Vérifiez que vous utilisez une date valide
+2. Essayez de rafraîchir la page
+3. Contactez-nous si le problème persiste
+
+---
+
+**Développé avec soin pour votre bien-être quotidien** 💜
+
+*"Prendre soin de sa santé, simplement et efficacement"*
