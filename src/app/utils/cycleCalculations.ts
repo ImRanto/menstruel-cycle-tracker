@@ -79,39 +79,57 @@ export const generateCalendar = (
   periodLength: number,
   results: CycleResults
 ): CalendarDay[] => {
-  const calendarDays: CalendarDay[] = [];
-  const start = new Date(startDate);
-  const today = new Date().toISOString().split("T")[0];
+  // Toujours retourner un tableau, même en cas d'erreur
+  try {
+    const calendarDays: CalendarDay[] = [];
+    const start = new Date(startDate);
+    const today = new Date().toISOString().split("T")[0];
 
-  for (let i = 0; i < cycleLength; i++) {
-    const currentDate = new Date(start);
-    currentDate.setDate(currentDate.getDate() + i);
-    const dateStr = currentDate.toISOString().split("T")[0];
-    const dayOfWeek = currentDate.getDay();
-
-    // Déterminer la phase
-    let phase = "luteal";
-    if (i < periodLength) {
-      phase = "menstrual";
-    } else if (i < cycleLength - results.lutealPhaseLength) {
-      phase = "follicular";
-    } else if (i === cycleLength - results.lutealPhaseLength) {
-      phase = "ovulation";
+    // Validation des données
+    if (!startDate || isNaN(start.getTime())) {
+      return []; // Retourne tableau vide si date invalide
     }
 
-    calendarDays.push({
-      date: dateStr,
-      day: i + 1,
-      dayOfMonth: currentDate.getDate(),
-      isOvulation: dateStr === results.ovulationDate,
-      isFertile:
-        dateStr >= results.fertileWindow.start &&
-        dateStr <= results.fertileWindow.end,
-      isPeriod: i < periodLength,
-      isToday: dateStr === today,
-      isWeekend: dayOfWeek === 0 || dayOfWeek === 6,
-      phase,
-    });
+    // Vérifier si les nombres sont valides
+    const validCycleLength = Math.max(1, Math.min(cycleLength, 45)); // Limite raisonnable
+    const validPeriodLength = Math.max(1, Math.min(periodLength, 10)); // Limite raisonnable
+    const lutealPhaseLength = results.lutealPhaseLength || 14;
+
+    for (let i = 0; i < validCycleLength; i++) {
+      const currentDate = new Date(start);
+      currentDate.setDate(currentDate.getDate() + i);
+      const dateStr = currentDate.toISOString().split("T")[0];
+      const dayOfWeek = currentDate.getDay();
+
+      // Déterminer la phase
+      let phase = "luteal";
+      if (i < validPeriodLength) {
+        phase = "menstrual";
+      } else if (i < validCycleLength - lutealPhaseLength) {
+        phase = "follicular";
+      } else if (i === validCycleLength - lutealPhaseLength) {
+        phase = "ovulation";
+      }
+
+      calendarDays.push({
+        date: dateStr,
+        day: i + 1,
+        dayOfMonth: currentDate.getDate(),
+        isOvulation: dateStr === results.ovulationDate,
+        isFertile:
+          dateStr >= results.fertileWindow.start &&
+          dateStr <= results.fertileWindow.end,
+        isPeriod: i < validPeriodLength,
+        isToday: dateStr === today,
+        isWeekend: dayOfWeek === 0 || dayOfWeek === 6,
+        phase,
+      });
+    }
+
+    return calendarDays; // ⬅️ TOUJOURS retourner un tableau
+  } catch (error) {
+    console.error("Erreur dans generateCalendar:", error);
+    return []; // ⬅️ IMPORTANT: Retourner un tableau vide en cas d'erreur
   }
 };
 
