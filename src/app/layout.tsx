@@ -5,7 +5,11 @@ export const metadata: Metadata = {
   title: "CycleFlow - Calculateur de Cycle Menstruel",
   description:
     "Application simple et élégante pour suivre votre cycle menstruel, calculer l'ovulation et les périodes fertiles",
+  icons: {
+    icon: "/cycle.jpg",
+  },
 };
+
 
 export default function RootLayout({
   children,
@@ -16,7 +20,7 @@ export default function RootLayout({
     <html lang="fr">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/cycle.ico" type="image/x-icon"/>
       </head>
       <body
         className={`bg-linear-to-br from-pink-50 to-purple-50`}
