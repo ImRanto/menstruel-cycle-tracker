@@ -10,6 +10,7 @@ import {
 import CycleCalendar from "./CycleCalendar";
 import CycleStats from "./CycleStats";
 import PhaseIndicator from "./PhaseIndicator";
+import { Calendar, Droplets, Save, Target } from "lucide-react";
 
 const CycleCalculator: React.FC = () => {
   const today = new Date().toISOString().split("T")[0];
@@ -135,9 +136,12 @@ const CycleCalculator: React.FC = () => {
               <form className="space-y-8">
                 {/* Date de début */}
                 <div className="bg-linear-to-r from-purple-50 to-pink-50 p-6 rounded-2xl border border-purple-100">
-                  <label className="block text-lg font-semibold text-gray-800 mb-4">
-                    📅 Date de début des règles
-                  </label>
+                  <div className="flex items-center gap-3 mb-4">
+                    <Calendar className="w-6 h-6 text-purple-600" />
+                    <h3 className="text-lg font-semibold text-gray-900">
+                      Date de début des règles
+                    </h3>
+                  </div>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <input
                       type="date"
@@ -160,9 +164,12 @@ const CycleCalculator: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {/* Durée du cycle */}
                   <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
-                    <label className="block text-lg font-semibold text-gray-800 mb-6">
-                      ⏱️ Durée du cycle
-                    </label>
+                    <div className="flex items-center gap-3 mb-6">
+                      <Target className="w-6 h-6 text-purple-600" />
+                      <h3 className="text-lg font-semibold text-gray-900">
+                        Durée de votre cycle
+                      </h3>
+                    </div>
 
                     <div className="mb-6">
                       <div className="flex items-center justify-between mb-4">
@@ -208,9 +215,12 @@ const CycleCalculator: React.FC = () => {
 
                   {/* Durée des règles */}
                   <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
-                    <label className="block text-lg font-semibold text-gray-800 mb-6">
-                      🩸 Durée des règles
-                    </label>
+                    <div className="flex items-center gap-3 mb-6">
+                      <Droplets className="w-6 h-6 text-pink-600" />
+                      <h3 className="text-lg font-semibold text-gray-900">
+                        Durée des règles
+                      </h3>
+                    </div>
 
                     <div className="mb-6">
                       <div className="flex items-center justify-between mb-4">
@@ -282,17 +292,15 @@ const CycleCalculator: React.FC = () => {
                 </div>
 
                 {/* Bouton d'enregistrement */}
-                <div className="pt-6">
-                  <button
-                    type="button"
-                    id="saveButton"
-                    onClick={handleSave}
-                    className="w-full bg-linear-to-r from-gray-800 to-gray-900 text-white font-semibold py-4 px-6 rounded-xl hover:from-gray-900 hover:to-black transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center space-x-3"
-                  >
-                    <span>💾</span>
-                    <span>Enregistrer les préférences</span>
-                  </button>
-                </div>
+                <button
+                  type="button"
+                  id="saveButton"
+                  onClick={handleSave}
+                  className="group w-full bg-linear-to-r from-gray-900 to-black text-white font-semibold py-4 px-6 rounded-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-3 hover:-translate-y-1"
+                >
+                  <Save className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                  <span>Enregistrer mes préférences</span>
+                </button>
               </form>
             </div>
 
