@@ -18,7 +18,7 @@ const CycleCalculator: React.FC = () => {
   const [cycleData, setCycleData] = useState<CycleData>({
     startDate: today,
     cycleLength: 28,
-    periodLength: 5,
+    periodLength: 4,
     lutealPhaseLength: 14,
   });
 
