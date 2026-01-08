@@ -37,7 +37,7 @@ const PhaseIndicator: React.FC<PhaseIndicatorProps> = ({
         </div>
         <div className="w-full bg-gray-200 rounded-full h-3">
           <div
-            className="bg-gradient-to-r from-purple-500 to-pink-500 h-3 rounded-full transition-all duration-500"
+            className="bg-linear-to-r from-purple-500 to-pink-500 h-3 rounded-full transition-all duration-500"
             style={{ width: `${phaseProgress}%` }}
           ></div>
         </div>
@@ -79,7 +79,7 @@ const PhaseIndicator: React.FC<PhaseIndicatorProps> = ({
         </div>
 
         {/* Ligne de connexion */}
-        <div className="absolute top-6 left-0 right-0 h-1 bg-gradient-to-r from-red-300 via-blue-300 via-pink-300 to-purple-300 transform -translate-y-1/2"></div>
+        <div className="absolute top-6 left-0 right-0 h-1 bg-linear-to-r from-red-300 via-blue-300 via-pink-300 to-purple-300 transform -translate-y-1/2"></div>
       </div>
 
       <div className="mt-4 p-4 bg-gray-50 rounded-xl">

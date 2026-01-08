@@ -100,7 +100,7 @@ const CycleCalculator: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50 p-4 md:p-8">
+    <div className="min-h-screen bg-linear-to-r from-gray-50 to-purple-50 p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
         {/* En-tête */}
         <div className="mb-8">
@@ -119,7 +119,7 @@ const CycleCalculator: React.FC = () => {
             {/* Carte principale du formulaire */}
             <div className="bg-white rounded-3xl shadow-2xl p-6 md:p-8">
               <div className="flex items-center mb-8">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mr-4">
+                <div className="w-12 h-12 bg-linear-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mr-4">
                   <span className="text-2xl text-white">📝</span>
                 </div>
                 <div>
@@ -134,7 +134,7 @@ const CycleCalculator: React.FC = () => {
 
               <form className="space-y-8">
                 {/* Date de début */}
-                <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-2xl border border-purple-100">
+                <div className="bg-linear-to-r from-purple-50 to-pink-50 p-6 rounded-2xl border border-purple-100">
                   <label className="block text-lg font-semibold text-gray-800 mb-4">
                     📅 Date de début des règles
                   </label>
@@ -250,7 +250,7 @@ const CycleCalculator: React.FC = () => {
                 </div>
 
                 {/* Phase lutéale */}
-                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-100">
+                <div className="bg-linear-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-100">
                   <label className="block text-lg font-semibold text-gray-800 mb-4">
                     🌙 Phase lutéale
                   </label>
@@ -264,7 +264,7 @@ const CycleCalculator: React.FC = () => {
                         max="18"
                         value={cycleData.lutealPhaseLength}
                         onChange={handleInputChange}
-                        className="w-full h-3 bg-gradient-to-r from-blue-200 to-indigo-300 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-indigo-600"
+                        className="w-full h-3 bg-linear-to-r from-blue-200 to-indigo-300 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-indigo-600"
                       />
                       <div className="flex justify-between text-sm text-gray-500 mt-2">
                         <span>10</span>
@@ -318,7 +318,7 @@ const CycleCalculator: React.FC = () => {
                 />
 
                 {/* Carte d'information */}
-                <div className="bg-gradient-to-br from-white to-purple-50 rounded-2xl shadow-xl p-6 border border-purple-100">
+                <div className="bg-linear-to-r from-white to-purple-50 rounded-2xl shadow-xl p-6 border border-purple-100">
                   <h3 className="text-xl font-bold text-gray-800 mb-4">
                     📊 Statistiques du cycle
                   </h3>
@@ -355,7 +355,7 @@ const CycleCalculator: React.FC = () => {
                 </div>
 
                 {/* Rappel */}
-                <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl shadow-lg p-6 border border-amber-200">
+                <div className="bg-linear-to-r from-amber-50 to-orange-50 rounded-2xl shadow-lg p-6 border border-amber-200">
                   <div className="flex items-start">
                     <div className="text-2xl mr-4">💡</div>
                     <div>
@@ -374,7 +374,7 @@ const CycleCalculator: React.FC = () => {
         </div>
 
         {/* Avertissement */}
-        <div className="mt-12 p-6 bg-gradient-to-r from-rose-50 to-pink-50 border border-rose-200 rounded-2xl shadow-sm">
+        <div className="mt-12 p-6 bg-linear-to-r from-rose-50 to-pink-50 border border-rose-200 rounded-2xl shadow-sm">
           <div className="flex items-start">
             <div className="text-2xl mr-4">⚠️</div>
             <div>

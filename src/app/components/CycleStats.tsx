@@ -18,9 +18,9 @@ const CycleStats: React.FC<CycleStatsProps> = ({ results }) => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-white to-purple-50 rounded-3xl shadow-2xl p-6 border border-purple-100">
+    <div className="bg-linear-to-r from-white to-purple-50 rounded-3xl shadow-2xl p-6 border border-purple-100">
       <div className="flex items-center mb-8">
-        <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mr-4">
+        <div className="w-12 h-12 bg-linear-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mr-4">
           <span className="text-2xl text-white">📈</span>
         </div>
         <div>
@@ -31,11 +31,11 @@ const CycleStats: React.FC<CycleStatsProps> = ({ results }) => {
 
       <div className="space-y-6">
         {/* Date d'ovulation */}
-        <div className="relative overflow-hidden bg-gradient-to-r from-pink-50 to-rose-50 p-6 rounded-2xl border border-pink-200 group hover:shadow-lg transition-all duration-300">
+        <div className="relative overflow-hidden bg-linear-to-r from-pink-50 to-rose-50 p-6 rounded-2xl border border-pink-200 group hover:shadow-lg transition-all duration-300">
           <div className="absolute top-0 right-0 w-24 h-24 bg-pink-200 rounded-full -translate-y-12 translate-x-12 opacity-20 group-hover:scale-110 transition-transform duration-300"></div>
 
           <div className="flex items-center mb-4">
-            <div className="w-10 h-10 bg-gradient-to-r from-pink-500 to-rose-500 rounded-xl flex items-center justify-center mr-4">
+            <div className="w-10 h-10 bg-linear-to-r from-pink-500 to-rose-500 rounded-xl flex items-center justify-center mr-4">
               <span className="text-xl text-white">🥚</span>
             </div>
             <div>
@@ -65,11 +65,11 @@ const CycleStats: React.FC<CycleStatsProps> = ({ results }) => {
         </div>
 
         {/* Fenêtre fertile */}
-        <div className="relative overflow-hidden bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-2xl border border-green-200 group hover:shadow-lg transition-all duration-300">
+        <div className="relative overflow-hidden bg-linear-to-r from-green-50 to-emerald-50 p-6 rounded-2xl border border-green-200 group hover:shadow-lg transition-all duration-300">
           <div className="absolute top-0 right-0 w-24 h-24 bg-green-200 rounded-full -translate-y-12 translate-x-12 opacity-20 group-hover:scale-110 transition-transform duration-300"></div>
 
           <div className="flex items-center mb-4">
-            <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mr-4">
+            <div className="w-10 h-10 bg-linear-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mr-4">
               <span className="text-xl text-white">💖</span>
             </div>
             <div>
@@ -102,7 +102,7 @@ const CycleStats: React.FC<CycleStatsProps> = ({ results }) => {
                   key={i}
                   className={`w-10 h-10 rounded-lg flex items-center justify-center text-sm font-medium ${
                     isOvulation
-                      ? "bg-gradient-to-r from-pink-500 to-rose-500 text-white"
+                      ? "bg-linear-to-r from-pink-500 to-rose-500 text-white"
                       : "bg-green-100 text-green-800"
                   }`}
                 >
@@ -114,11 +114,11 @@ const CycleStats: React.FC<CycleStatsProps> = ({ results }) => {
         </div>
 
         {/* Prochaines règles */}
-        <div className="relative overflow-hidden bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-200 group hover:shadow-lg transition-all duration-300">
+        <div className="relative overflow-hidden bg-linear-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-200 group hover:shadow-lg transition-all duration-300">
           <div className="absolute top-0 right-0 w-24 h-24 bg-blue-200 rounded-full -translate-y-12 translate-x-12 opacity-20 group-hover:scale-110 transition-transform duration-300"></div>
 
           <div className="flex items-center mb-4">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mr-4">
+            <div className="w-10 h-10 bg-linear-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mr-4">
               <span className="text-xl text-white">📅</span>
             </div>
             <div>
