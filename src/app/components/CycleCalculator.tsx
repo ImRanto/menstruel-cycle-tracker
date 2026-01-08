@@ -10,7 +10,7 @@ import {
 import CycleCalendar from "./CycleCalendar";
 import CycleStats from "./CycleStats";
 import PhaseIndicator from "./PhaseIndicator";
-import { Calendar, Droplets, Save, Target } from "lucide-react";
+import { Calendar, Droplets, Moon, Save, Target } from "lucide-react";
 
 const CycleCalculator: React.FC = () => {
   const today = new Date().toISOString().split("T")[0];
@@ -261,8 +261,9 @@ const CycleCalculator: React.FC = () => {
 
                 {/* Phase lutéale */}
                 <div className="bg-linear-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-100">
-                  <label className="block text-lg font-semibold text-gray-800 mb-4">
-                    🌙 Phase lutéale
+                  <label className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                    <Moon className="w-5 h-5 text-indigo-600" />
+                    Phase lutéale
                   </label>
                   <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
                     <div className="flex-1">
