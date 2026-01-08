@@ -1,4 +1,12 @@
 import React from "react";
+import {
+  Target,
+  Calendar,
+  Heart,
+  TrendingUp,
+  Egg,
+  Droplets,
+} from "lucide-react";
 import { CycleResults } from "../types/cycle.types";
 import { formatDate } from "../utils/cycleCalculations";
 
@@ -20,8 +28,8 @@ const CycleStats: React.FC<CycleStatsProps> = ({ results }) => {
   return (
     <div className="bg-linear-to-r from-white to-purple-50 rounded-3xl shadow-2xl p-6 border border-purple-100">
       <div className="flex items-center mb-8">
-        <div className="w-12 h-12 bg-linear-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mr-4">
-          <span className="text-2xl text-white">📈</span>
+        <div className="w-12 h-12 bg-linear-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mr-4 shadow-lg">
+          <TrendingUp className="w-6 h-6 text-white" />
         </div>
         <div>
           <h2 className="text-2xl font-bold text-gray-900">Prédictions</h2>
@@ -35,8 +43,8 @@ const CycleStats: React.FC<CycleStatsProps> = ({ results }) => {
           <div className="absolute top-0 right-0 w-24 h-24 bg-pink-200 rounded-full -translate-y-12 translate-x-12 opacity-20 group-hover:scale-110 transition-transform duration-300"></div>
 
           <div className="flex items-center mb-4">
-            <div className="w-10 h-10 bg-linear-to-r from-pink-500 to-rose-500 rounded-xl flex items-center justify-center mr-4">
-              <span className="text-xl text-white">🥚</span>
+            <div className="w-10 h-10 bg-linear-to-r from-pink-500 to-rose-500 rounded-xl flex items-center justify-center mr-4 shadow-md">
+              <Egg className="w-5 h-5 text-white" />
             </div>
             <div>
               <h3 className="font-bold text-gray-800">Date d'ovulation</h3>
@@ -58,7 +66,7 @@ const CycleStats: React.FC<CycleStatsProps> = ({ results }) => {
           </div>
 
           <div className="mt-4 text-center">
-            <span className="inline-block bg-pink-100 text-pink-800 text-sm font-medium px-4 py-2 rounded-full">
+            <span className="inline-block bg-linear-to-r from-pink-100 to-rose-100 text-pink-800 text-sm font-medium px-4 py-2 rounded-full border border-pink-200">
               Période critique
             </span>
           </div>
@@ -69,8 +77,8 @@ const CycleStats: React.FC<CycleStatsProps> = ({ results }) => {
           <div className="absolute top-0 right-0 w-24 h-24 bg-green-200 rounded-full -translate-y-12 translate-x-12 opacity-20 group-hover:scale-110 transition-transform duration-300"></div>
 
           <div className="flex items-center mb-4">
-            <div className="w-10 h-10 bg-linear-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mr-4">
-              <span className="text-xl text-white">💖</span>
+            <div className="w-10 h-10 bg-linear-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mr-4 shadow-md">
+              <Heart className="w-5 h-5 text-white" />
             </div>
             <div>
               <h3 className="font-bold text-gray-800">Fenêtre fertile</h3>
@@ -100,10 +108,10 @@ const CycleStats: React.FC<CycleStatsProps> = ({ results }) => {
               return (
                 <div
                   key={i}
-                  className={`w-10 h-10 rounded-lg flex items-center justify-center text-sm font-medium ${
+                  className={`w-10 h-10 rounded-lg flex items-center justify-center text-sm font-medium transition-all duration-300 hover:scale-110 ${
                     isOvulation
-                      ? "bg-linear-to-r from-pink-500 to-rose-500 text-white"
-                      : "bg-green-100 text-green-800"
+                      ? "bg-linear-to-r from-pink-500 to-rose-500 text-white shadow-md"
+                      : "bg-linear-to-r from-green-100 to-emerald-100 text-emerald-800 border border-emerald-200"
                   }`}
                 >
                   {date.getDate()}
@@ -118,8 +126,8 @@ const CycleStats: React.FC<CycleStatsProps> = ({ results }) => {
           <div className="absolute top-0 right-0 w-24 h-24 bg-blue-200 rounded-full -translate-y-12 translate-x-12 opacity-20 group-hover:scale-110 transition-transform duration-300"></div>
 
           <div className="flex items-center mb-4">
-            <div className="w-10 h-10 bg-linear-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mr-4">
-              <span className="text-xl text-white">📅</span>
+            <div className="w-10 h-10 bg-linear-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mr-4 shadow-md">
+              <Calendar className="w-5 h-5 text-white" />
             </div>
             <div>
               <h3 className="font-bold text-gray-800">Prochaines règles</h3>
@@ -141,9 +149,27 @@ const CycleStats: React.FC<CycleStatsProps> = ({ results }) => {
           </div>
 
           <div className="mt-4 text-center">
-            <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full">
-              <span>🩸</span>
+            <div className="inline-flex items-center space-x-2 bg-linear-to-r from-blue-100 to-indigo-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full border border-blue-200">
+              <Droplets className="w-4 h-4" />
               <span>Période menstruelle à venir</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Informations supplémentaires */}
+      <div className="mt-8 pt-6 border-t border-gray-100">
+        <div className="grid grid-cols-2 gap-4">
+          <div className="text-center">
+            <div className="text-sm text-gray-500">Phase actuelle</div>
+            <div className="font-bold text-lg text-purple-700 capitalize">
+              {results.currentPhase}
+            </div>
+          </div>
+          <div className="text-center">
+            <div className="text-sm text-gray-500">Progression</div>
+            <div className="font-bold text-lg text-pink-600">
+              {Math.round(results.phaseProgress)}%
             </div>
           </div>
         </div>
